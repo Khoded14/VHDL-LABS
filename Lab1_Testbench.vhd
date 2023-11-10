@@ -1,4 +1,4 @@
--- Test Bench
+-- Test Bench of a simple thermo controller 
 entity T_thermo is 
 end T_thermo; 
 
