@@ -1,3 +1,5 @@
+-- Registering the input with a CLOCK input and an optional reset for the thermocooler
+
 entity thermo is
 
 port (current_temp : in bit_vector(6 downto 0);
