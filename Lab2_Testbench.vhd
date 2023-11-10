@@ -1,3 +1,4 @@
+-- Test Bench of the Thermocooler
 entity T_thermo is 
 end T_thermo; 
 
