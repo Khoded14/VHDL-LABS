@@ -1,3 +1,5 @@
+-- Adding other functions in the Thermocooler 
+--  add the functionality of controlling the A_C_ON and the FURNACE_ON outputs with the added input COOL and HEAT. 
 entity thermo is 
 port (current_temp : in bit_vector(6 downto 0); 
       desired_temp : in bit_vector(6 downto 0); 
