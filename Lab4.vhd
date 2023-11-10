@@ -1,3 +1,9 @@
+-- Incorporating a state machine into the thermostat
+-- Adding new inputs to the state machine such as Furnace_hot and  AC_ready
+-- Registering the inputs with a clocked process 
+-- IDLE, HEATON, FURNACE_NOW_HOT, FURNACE_COOL,COOLON, AC_NOW_READY, AC_DONE is the state machine in the entire thermostat 
+--
+ 
 library IEEE; 
 USE IEEE.STD_LOGIC_1164.all; 
 entity thermo is 
@@ -39,7 +45,8 @@ elsif CLK'event and CLK = '1' then
 CURRENT_STATE <= NEXT_STATE; 
 end if; 
 end process; 
-
+-- Registering all the inputs of the state machine
+     
 process(CLK) begin
 if CLK'event and CLK = '1' then
 Current_temp_reg <= Current_temp;
@@ -63,6 +70,8 @@ if CLK'event and CLK = '1' then
 end if;
 end process;
 
+-- Adding the state types to the state machine
+     
 process(CURRENT_STATE,Current_temp_reg, Desired_temp_reg,HEAT_reg,COOL_reg,Furnace_hot_reg,AC_ready_reg)
 begin 
 case CURRENT_STATE is 
@@ -123,11 +132,7 @@ NEXT_STATE <= IDLE;
 end case;
 end process;
 
-
---CURRENT_STATE 
---NEXT_STATE
---HEATON, FURNACE_NOW_HOT, FURNACE_COOL, COOLON, AC_NOW_READY, AC_DONE
-
+-- Registering the output of the state machine with a clock 
 process(CLK)
 begin
 if(CLK'event and CLK = '1') then 
