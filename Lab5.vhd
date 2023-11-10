@@ -1,3 +1,6 @@
+-- Adding a counter to the state machine thermostat. 
+-- Making the counter to be in an integer format. 
+
 library IEEE; 
 USE IEEE.STD_LOGIC_1164.all; 
 USE IEEE.std_logic_arith.all;
