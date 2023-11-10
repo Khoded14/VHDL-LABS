@@ -1,5 +1,5 @@
 -- Code 
-
+-- This is the code of a simple thermo controller 
 entity thermo is 
 port (current_temp : in bit_vector(6 downto 0); 
       desired_temp : in bit_vector(6 downto 0); 
