@@ -1,3 +1,4 @@
+-- Test Bench
 entity T_thermo is 
 end T_thermo; 
 
